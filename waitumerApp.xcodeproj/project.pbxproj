@@ -9,21 +9,30 @@
 /* Begin PBXBuildFile section */
 		3DA167912915535F000F306D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DA167902915535F000F306D /* AppDelegate.swift */; };
 		3DA167932915535F000F306D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DA167922915535F000F306D /* SceneDelegate.swift */; };
-		3DA167952915535F000F306D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DA167942915535F000F306D /* ViewController.swift */; };
-		3DA167982915535F000F306D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DA167962915535F000F306D /* Main.storyboard */; };
+		3DA167952915535F000F306D /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DA167942915535F000F306D /* MainViewController.swift */; };
 		3DA1679A291553C8000F306D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3DA16799291553C8000F306D /* Assets.xcassets */; };
 		3DA1679D291553C9000F306D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DA1679B291553C9000F306D /* LaunchScreen.storyboard */; };
+		3DA167A6291556A7000F306D /* Appwrite in Frameworks */ = {isa = PBXBuildFile; productRef = 3DA167A5291556A7000F306D /* Appwrite */; };
+		3DE46D8229155EF300A39FD3 /* AppwriteService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE46D8129155EF300A39FD3 /* AppwriteService.swift */; };
+		3DE46D862916B28600A39FD3 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE46D852916B28600A39FD3 /* User.swift */; };
+		3DE46D882916B2A200A39FD3 /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE46D872916B2A200A39FD3 /* MainPresenter.swift */; };
+		3DE46D8B2916B5F400A39FD3 /* WTButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE46D8A2916B5F400A39FD3 /* WTButton.swift */; };
+		3DE46D8F2916DD5E00A39FD3 /* ModueBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE46D8E2916DD5E00A39FD3 /* ModueBuilder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3DA1678D2915535F000F306D /* waitumerApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = waitumerApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DA167902915535F000F306D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3DA167922915535F000F306D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		3DA167942915535F000F306D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		3DA167972915535F000F306D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3DA167942915535F000F306D /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		3DA16799291553C8000F306D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3DA1679C291553C9000F306D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3DA1679E291553C9000F306D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3DE46D8129155EF300A39FD3 /* AppwriteService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppwriteService.swift; sourceTree = "<group>"; };
+		3DE46D852916B28600A39FD3 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		3DE46D872916B2A200A39FD3 /* MainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
+		3DE46D8A2916B5F400A39FD3 /* WTButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WTButton.swift; sourceTree = "<group>"; };
+		3DE46D8E2916DD5E00A39FD3 /* ModueBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModueBuilder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3DA167A6291556A7000F306D /* Appwrite in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,15 +66,51 @@
 		3DA1678F2915535F000F306D /* waitumerApp */ = {
 			isa = PBXGroup;
 			children = (
-				3DA167902915535F000F306D /* AppDelegate.swift */,
-				3DA167922915535F000F306D /* SceneDelegate.swift */,
-				3DA167942915535F000F306D /* ViewController.swift */,
-				3DA167962915535F000F306D /* Main.storyboard */,
-				3DA16799291553C8000F306D /* Assets.xcassets */,
+				3DE46D8E2916DD5E00A39FD3 /* ModueBuilder.swift */,
+				3DE46D832916B21600A39FD3 /* App */,
+				3DE46D8029155EC800A39FD3 /* AppwriteManager */,
+				3DE46D842916B23A00A39FD3 /* MainModule */,
+				3DE46D892916B5C400A39FD3 /* Custom */,
 				3DA1679B291553C9000F306D /* LaunchScreen.storyboard */,
+				3DA16799291553C8000F306D /* Assets.xcassets */,
 				3DA1679E291553C9000F306D /* Info.plist */,
 			);
 			path = waitumerApp;
+			sourceTree = "<group>";
+		};
+		3DE46D8029155EC800A39FD3 /* AppwriteManager */ = {
+			isa = PBXGroup;
+			children = (
+				3DE46D8129155EF300A39FD3 /* AppwriteService.swift */,
+			);
+			name = AppwriteManager;
+			sourceTree = "<group>";
+		};
+		3DE46D832916B21600A39FD3 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				3DA167902915535F000F306D /* AppDelegate.swift */,
+				3DA167922915535F000F306D /* SceneDelegate.swift */,
+			);
+			name = App;
+			sourceTree = "<group>";
+		};
+		3DE46D842916B23A00A39FD3 /* MainModule */ = {
+			isa = PBXGroup;
+			children = (
+				3DE46D852916B28600A39FD3 /* User.swift */,
+				3DA167942915535F000F306D /* MainViewController.swift */,
+				3DE46D872916B2A200A39FD3 /* MainPresenter.swift */,
+			);
+			path = MainModule;
+			sourceTree = "<group>";
+		};
+		3DE46D892916B5C400A39FD3 /* Custom */ = {
+			isa = PBXGroup;
+			children = (
+				3DE46D8A2916B5F400A39FD3 /* WTButton.swift */,
+			);
+			name = Custom;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +129,9 @@
 			dependencies = (
 			);
 			name = waitumerApp;
+			packageProductDependencies = (
+				3DA167A5291556A7000F306D /* Appwrite */,
+			);
 			productName = waitumerApp;
 			productReference = 3DA1678D2915535F000F306D /* waitumerApp.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +160,9 @@
 				Base,
 			);
 			mainGroup = 3DA167842915535E000F306D;
+			packageReferences = (
+				3DA167A4291556A7000F306D /* XCRemoteSwiftPackageReference "sdk-for-apple" */,
+			);
 			productRefGroup = 3DA1678E2915535F000F306D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -127,7 +179,6 @@
 			files = (
 				3DA1679D291553C9000F306D /* LaunchScreen.storyboard in Resources */,
 				3DA1679A291553C8000F306D /* Assets.xcassets in Resources */,
-				3DA167982915535F000F306D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,8 +189,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3DA167952915535F000F306D /* ViewController.swift in Sources */,
+				3DA167952915535F000F306D /* MainViewController.swift in Sources */,
+				3DE46D882916B2A200A39FD3 /* MainPresenter.swift in Sources */,
+				3DE46D8B2916B5F400A39FD3 /* WTButton.swift in Sources */,
+				3DE46D8229155EF300A39FD3 /* AppwriteService.swift in Sources */,
 				3DA167912915535F000F306D /* AppDelegate.swift in Sources */,
+				3DE46D862916B28600A39FD3 /* User.swift in Sources */,
+				3DE46D8F2916DD5E00A39FD3 /* ModueBuilder.swift in Sources */,
 				3DA167932915535F000F306D /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -147,14 +203,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		3DA167962915535F000F306D /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				3DA167972915535F000F306D /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		3DA1679B291553C9000F306D /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -291,7 +339,6 @@
 				INFOPLIST_FILE = waitumerApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -303,7 +350,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -318,7 +365,6 @@
 				INFOPLIST_FILE = waitumerApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -330,7 +376,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -356,6 +402,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		3DA167A4291556A7000F306D /* XCRemoteSwiftPackageReference "sdk-for-apple" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/appwrite/sdk-for-apple";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		3DA167A5291556A7000F306D /* Appwrite */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3DA167A4291556A7000F306D /* XCRemoteSwiftPackageReference "sdk-for-apple" */;
+			productName = Appwrite;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 3DA167852915535E000F306D /* Project object */;
 }

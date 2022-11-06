@@ -338,7 +338,7 @@
 				CODE_SIGN_ENTITLEMENTS = waitumerApp/waitumerApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 4PCW4NA85G;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = waitumerApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -366,7 +366,7 @@
 				CODE_SIGN_ENTITLEMENTS = waitumerApp/waitumerApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 4PCW4NA85G;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = waitumerApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

@@ -11,7 +11,7 @@ class MainViewController: UIViewController {
     
     var presenter: MainPresenterProtocol!
     
-    private let testButton = WTButton.buildDefaultButton(with: "Login Annonymus", color: .systemFill)
+    private let startButton = WTButton.buildDefaultButton(with: "Start!", color: .systemFill)
     private let logoutButton = WTButton.buildDefaultButton(with: "Logout", color: .systemGray2)
     
     
@@ -19,6 +19,7 @@ class MainViewController: UIViewController {
         super.viewDidLoad()
         
         setupController()
+        show()
     }
     
     
@@ -27,18 +28,19 @@ class MainViewController: UIViewController {
     private func setupController() {
         view.backgroundColor = .systemGray3
         
-        view.addSubview(testButton)
-        testButton.addTarget(self, action: #selector(loginAnnonymusPressed), for: .touchUpInside)
+        view.addSubview(startButton)
+        startButton.addTarget(self, action: #selector(startButtonDidPressed), for: .touchUpInside)
         
         view.addSubview(logoutButton)
         logoutButton.addTarget(self, action: #selector(logoutPressed), for: .touchUpInside)
         
-        setupTestButtonLayout()
+        setupStartButtonLayout()
         setupLogoutButtonLayout()
     }
     
-    @objc private func loginAnnonymusPressed() {
+    @objc private func startButtonDidPressed() {
         self.presenter.loginAnnonymus()
+        self.presenter.openCurrentOrder()
     }
     
     @objc private func logoutPressed() {
@@ -47,23 +49,23 @@ class MainViewController: UIViewController {
 
 //MARK: - Layout
     
-    private func setupTestButtonLayout() {
-        testButton.translatesAutoresizingMaskIntoConstraints = false
+    private func setupStartButtonLayout() {
+        startButton.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            testButton.widthAnchor.constraint(equalToConstant: 300),
-            testButton.heightAnchor.constraint(equalToConstant: 60),
-            testButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            testButton.centerYAnchor.constraint(equalTo: view.centerYAnchor)
+            startButton.widthAnchor.constraint(equalToConstant: 150),
+            startButton.heightAnchor.constraint(equalToConstant: 60),
+            startButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            startButton.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: 100)
         ])
     }
     
     private func setupLogoutButtonLayout() {
         logoutButton.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            logoutButton.widthAnchor.constraint(equalToConstant: 200),
+            logoutButton.widthAnchor.constraint(equalToConstant: 100),
             logoutButton.heightAnchor.constraint(equalToConstant: 40),
             logoutButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            logoutButton.topAnchor.constraint(equalTo: testButton.bottomAnchor, constant: 250)
+            logoutButton.topAnchor.constraint(equalTo: startButton.bottomAnchor, constant: 250)
         ])
     }
 }

@@ -8,19 +8,30 @@
 import UIKit
 
 protocol ModuleBuilderProtocol {
-    static func buildMainModule() -> UIViewController
+    func buildMainModule(with router: Router) -> UIViewController
+    func buildOrdersModule(with router: Router, order: Order) -> UIViewController
 }
 
 class ModuleBuilder: ModuleBuilderProtocol {
-    
-    static func buildMainModule() -> UIViewController {
+
+    func buildMainModule(with router: Router) -> UIViewController {
         let view = MainViewController()
         let appwrite = AppwriteService()
         let user = User(name: "annonymus", isLoggined: false)
-        let presenter = MainPresenter(view: view, user: user, appwriteService: appwrite)
+        let presenter = MainPresenter(view: view, router: router, user: user, appwriteService: appwrite)
         view.presenter = presenter
         
         return view
     }
+    
+    func buildOrdersModule(with router: Router, order: Order) -> UIViewController {
+        let view = OrdersViewController()
+        let appwrite = AppwriteService()
+        let presenter = OrdersPresenter(view: view, router: router, order: order, appwriteService: appwrite)
+        view.presenter = presenter
+        
+        return view
+    }
+    
     
 }
